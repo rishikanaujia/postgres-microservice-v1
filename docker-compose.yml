@@ -2,7 +2,7 @@ services:
   web:
     build: .
     ports:
-      - "8000:8000"
+      - "8001:8000"  # Changed from 8000:8000 to 8001:8000
     depends_on:
       db:
         condition: service_healthy
@@ -27,7 +27,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=microservice_db
     ports:
-      - "5434:5432"  # Changed from 5433 to 5434
+      - "5434:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
