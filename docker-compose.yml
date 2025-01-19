@@ -2,7 +2,7 @@ services:
   web:
     build: .
     ports:
-      - "8001:8000"  # Changed from 8000:8000 to 8001:8000
+      - "8001:8000"
     depends_on:
       db:
         condition: service_healthy
